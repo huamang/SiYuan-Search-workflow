@@ -11,7 +11,7 @@
 
 安装workflow后，需要配置端口号，端口号在设置->关于->在浏览器上使用中查看
 
-![image-20230205001245863](https://tuchuang.huamang.xyz/img/image-20230205001245863.png)
+![image-20230205002514364](https://tuchuang.huamang.xyz/img/image-20230205002514364.png)
 
 然后进入到alfred中添加配置即可
 
