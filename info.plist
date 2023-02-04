@@ -102,7 +102,8 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>需要先配置好端口，在设置-&gt;关于-&gt;用浏览器打开中查看端口号
+usage: sy xx</string>
 	<key>uidata</key>
 	<dict>
 		<key>4F3D8A39-5B83-4DEE-9F76-CCCAC95731B5</key>
@@ -121,7 +122,33 @@
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>输入web端端口号，可以在设置-&gt;关于-&gt;在浏览器上使用看到</string>
+			<key>label</key>
+			<string>port</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>port</string>
+		</dict>
+	</array>
+	<key>variablesdontexport</key>
 	<array/>
+	<key>version</key>
+	<string>1.1</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>

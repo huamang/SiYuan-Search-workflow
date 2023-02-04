@@ -1,7 +1,9 @@
 import json
 import sys
 import requests
+import os
 
+port = os.environ['port']
 
 def fullTextSearchBlock(q):
     searchJson = {}
@@ -26,7 +28,7 @@ def fullTextSearchBlock(q):
     searchJson["orderBy"] = 0
     
     data = json.dumps(searchJson)
-    url = "http://127.0.0.1:51701/api/search/fullTextSearchBlock"
+    url = "http://127.0.0.1:"+port+"/api/search/fullTextSearchBlock"
     res = requests.post(url, data)
     resJson = json.loads(res.text)
     return resJson
