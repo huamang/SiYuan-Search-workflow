@@ -15,7 +15,7 @@
 
 然后进入到alfred中添加配置即可
 
-![image-20230205001340922](https://tuchuang.huamang.xyz/img/image-20230205001340922.png)
+![image-20230205001953742](https://tuchuang.huamang.xyz/img/image-20230205001953742.png)
 
 使用关键字：`sy` 就可以直接使用了~
 
