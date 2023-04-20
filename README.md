@@ -9,14 +9,6 @@
 
 # 使用
 
-安装workflow后，需要配置端口号，端口号在设置->关于->在浏览器上使用中查看
-
-![image-20230205002514364](https://tuchuang.huamang.xyz/img/image-20230205002514364.png)
-
-然后进入到alfred中添加配置即可
-
-![image-20230205001953742](https://tuchuang.huamang.xyz/img/image-20230205001953742.png)
-
-使用关键字：`sy` 就可以直接使用了~
+设定快捷键或者使用关键字：`sy` 就可以直接使用了~
 
 ![image-20230204173711204](https://tuchuang.huamang.xyz/img/image-20230204173711204.png)
