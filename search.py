@@ -1,9 +1,7 @@
 import json
 import sys
 import requests
-import os
 
-port = os.environ['port']
 
 def fullTextSearchBlock(q):
     searchJson = {}
@@ -28,7 +26,7 @@ def fullTextSearchBlock(q):
     searchJson["orderBy"] = 0
     
     data = json.dumps(searchJson)
-    url = "http://127.0.0.1:"+port+"/api/search/fullTextSearchBlock"
+    url = "http://127.0.0.1:6806/api/search/fullTextSearchBlock"
     res = requests.post(url, data)
     resJson = json.loads(res.text)
     return resJson
@@ -49,10 +47,35 @@ def parseRes(resJson):
     items_json = json.dumps(items)
     sys.stdout.write(items_json)
 
+def getRecentDocs():
+    url = "http://127.0.0.1:6806/api/storage/getRecentDocs"
+    res = requests.post(url, json={})
+    resJson = json.loads(res.text)
+    return resJson
+
+def parseRecentDocs(resJson):
+    itemList = []
+    uid = 1
+    for doc in resJson["data"]:
+        item = {}
+        item["uid"] = uid
+        item["title"] = doc["title"]
+        item["arg"] = "siyuan://blocks/" + doc["rootID"]
+        itemList.append(item)
+        uid += 1
+    items = {}
+    items["items"] = itemList
+    items_json = json.dumps(items)
+    sys.stdout.write(items_json)
+
 def main():
     alfredQuery = str(sys.argv[1])
-    resJson = fullTextSearchBlock(alfredQuery)
-    parseRes(resJson)
+    if alfredQuery:
+        resJson = fullTextSearchBlock(alfredQuery)
+        parseRes(resJson)
+    else:
+        resJson = getRecentDocs()
+        parseRecentDocs(resJson)
 
 
 if __name__ == '__main__':
